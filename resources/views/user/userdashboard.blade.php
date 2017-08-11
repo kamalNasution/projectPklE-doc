@@ -29,7 +29,7 @@
                                 <ul>
                                         <h3>Silahkan Memulai Pekerjaan Anda!</h3>
                                     <li><b>Create Mail</b>,&nbsp; &nbsp; untuk membuat surat</li>
-                                    <li><b>Inbox</b>,&nbsp; &nbsp; untuk mengecek revisi beserta pesan masuk lainnya</li>
+                                    <li><b>Sent Mail</b>,&nbsp; &nbsp; untuk melihat yang telah anda kirim</li>
                                 </ul>
                             </div>
                             <!-- /.box body -->
