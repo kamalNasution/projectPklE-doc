@@ -20,7 +20,11 @@ Route::get('/dashboard', function () {
     return view('dasbor');
 });
 
-Route::get('dashboard/pilihsurat', function () {
+Route::get('/user', function () {
+    return view('user.userdashboard');
+});
+
+Route::get('/dashboard/pilihsurat', function () {
     return view('pilihsurat');
 });
 Route::get('/dashboard/pilihsurat/memorandum', function () {

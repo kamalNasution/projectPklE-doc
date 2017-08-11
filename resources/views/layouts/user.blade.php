@@ -3,21 +3,20 @@
 <head>
 	@include('includes.head')
 </head>
-<body class="hold-transition skin-green-light layout-top-nav">
+<body class="hold-transition skin-green-light fixed sidebar-mini">
 	<div class="wrapper">
 		<header class="main-header">
-			@include('includes.header')
+			@include('includes.headeruser')
 		</header>
 		<div class="content-wrapper">
-			<div class="container">
 				@yield('content')
-			</div>
 			<!-- /.container -->
 		</div>
-		<footer class="main-footer">
-			@include('includes.footer')
-		</footer>
 	</div>
+	@include('includes.footeradmin')
+
+
 <!-- ./wrapper -->
 </body>
+
 </html>
