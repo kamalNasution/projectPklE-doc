@@ -12,7 +12,7 @@
     </h1>
     <ol class="breadcrumb">
       <li><a href=""><i class="fa fa-dashboard"></i>E-Document</a></li>
-      <li><a href="">Admin</a></li>
+      <li><a href="">User</a></li>
       <li class="active">Create Mail</li>
     </ol>
   </section>
@@ -33,9 +33,9 @@
                                 <h1 align="center"> Silahkan Pilih Jenis Surat </h1>
                                     <br>
                                         <p align="center">
-                                            <a href="/dashboard/pilihsurat/memorandum"><button  type="button" class="btn btn-primary btn-lg">Memorandum</button></a>
-                                            <a href="/dashboard/pilihsurat/surat_edaran"><button  type="button" class="btn btn-primary btn-lg">Surat Edaran</button></a>
-                                            <a href="/dashboard/pilihsurat/intern"><button align="right" type="button" class="btn btn-primary btn-lg">Intern</button></a>
+                                            <a href=""><button  type="button" class="btn btn-primary btn-lg">Memorandum</button></a>
+                                            <a href=""><button  type="button" class="btn btn-primary btn-lg">Surat Edaran</button></a>
+                                            <a href=""><button align="right" type="button" class="btn btn-primary btn-lg">Intern</button></a>
                                         </p>
                                             <br>
                                                 <br>
