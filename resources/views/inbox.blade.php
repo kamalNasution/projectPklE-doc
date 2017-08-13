@@ -51,7 +51,9 @@
           <tbody>
             @foreach ($memorandum as $surat)
             <tr>
-              <?php $value = $surat->id ?>
+            <?php $value = $surat->id ?>
+            @if ( Auth::user()-> name == $surat->kepada)
+              
               <td>{{$loop->iteration}}</td>
               <td>{{$surat->kepada}}</td>
               <td>{{$surat->dari}}</td>
@@ -59,6 +61,7 @@
               <td>{{$surat->tanggal}}</td>
               <td>{{$surat->hal}}</td>
               <td>
+           
                 <a href="/memorandumedit/{{($value)}}">
                   <button class="btn btn-sm btn-primary edit" >
                     Edit
@@ -81,6 +84,7 @@
                 <!--button class="btn btn-sm btn-danger hapus" onclick="hapus(this)">Hapus</button-->
               </td>
             </tr>
+              @endif
             @endforeach
           </tbody>
         </table>

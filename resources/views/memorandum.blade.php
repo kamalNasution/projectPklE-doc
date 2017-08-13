@@ -24,20 +24,20 @@
                 <div class="col-md-6">
                   <select id="kepada" class="form-control" name="kepada">
                     <option value="0">--Pilih Asal--</option>
-                    <option value="Kepala Bagian Sekretariat">Kepala Bagian Sekretariat</option>
-                    <option value="Kepala Bagian Tanaman">Kepala Bagian Tanaman</option>
-                    <option value="Kepala Bagian Teknik">Kepala Bagian Teknik</option>
-                    <option value="Kepala Bagian Teknologi">Kepala Bagian Teknologi</option>
-                    <option value="Kepala Bagian Perencanaan & Pengembangan">Kepala Bagian Perencanaan & Pengembangan</option>
-                    <option value="Kepala Bagian Keuangan">Kepala Bagian Keuangan</option>
-                    <option value="Kepala Bagian Akutansi">Kepala Bagian Akutansi</option>
-                    <option value="Kepala Bagian Komersil">Kepala Bagian Komersil</option>
-                    <option value="Kepala Bagian TI/TB & Manajemen Resiko">Kepala Bagian TI/TB & Manajemen Resiko</option>
-                    <option value="Kepala Bagian SDM">Kepala Bagian SDM</option>
-                    <option value="Kepala Bagian Hukum">Kepala Bagian Hukum</option>
-                    <option value="Kepala Bagian PKBL">Kepala Bagian PKBL</option>
-                    <option value="Kepala Bagian Pelelangan">Kepala Bagian Pelelangan</option>
-                    <option value="Kepala Bagian SPI">Kepala Bagian SPI</option>
+                    <option value=" Bagian Sekretariat">Bagian Sekretariat</option>
+                    <option value=" Bagian Tanaman"> Bagian Tanaman</option>
+                    <option value=" Bagian Teknik">Bagian Teknik</option>
+                    <option value=" Bagian Teknologi"> Bagian Teknologi</option>
+                    <option value=" Bagian Perencanaan & Pengembangan">Bagian Perencanaan & Pengembangan</option>
+                    <option value=" Bagian Keuangan"> Bagian Keuangan</option>
+                    <option value=" Bagian Akutansi"> Bagian Akutansi</option>
+                    <option value=" Bagian Komersil"> Bagian Komersil</option>
+                    <option value=" Bagian TI/TB & Manajemen Resiko">Bagian TI/TB & Manajemen Resiko</option>
+                    <option value=" Bagian SDM">Bagian SDM</option>
+                    <option value=" Bagian Hukum">Bagian Hukum</option>
+                    <option value=" Bagian PKBL">Bagian PKBL</option>
+                    <option value=" Bagian Pelelangan">Bagian Pelelangan</option>
+                    <option value=" Bagian SPI">Bagian SPI</option>
                   </select>
                 </div>
               </div>
