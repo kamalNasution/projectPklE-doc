@@ -62,7 +62,7 @@ class ControllerMemorandum extends Controller
     }
 
      public function pdf(){
-         $pdf=PDF::loadview('suratview');
+         $pdf=PDF::loadview('suratPDF');
          return $pdf->download('suratview.pdf');
 
     }
