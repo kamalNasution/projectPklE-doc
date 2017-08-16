@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Input;
 use App\Surat;
+use PDF;
+
 
 
 use Illuminate\Http\Request;
@@ -24,6 +26,8 @@ class ControllerMemorandum extends Controller
     	}
 
     public function read(){
+        
+
         $data['memorandum'] = Surat::all();
         return view('inbox',$data);
     }
@@ -55,5 +59,16 @@ class ControllerMemorandum extends Controller
     	$data->save();
 
       return redirect('dashboard/inbox/memorandum');
+    }
+
+     public function pdf(){
+         $pdf=PDF::loadview('suratview');
+         return $pdf->download('suratview.pdf');
+
+    }
+
+    public function sent(){
+        $data['memorandum'] = Surat::all();
+        return view('kirimpesan',$data);
     }
 }

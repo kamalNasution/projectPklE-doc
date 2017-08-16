@@ -41,8 +41,12 @@ Route::get('/beranda', function () {
     return view('beranda');
 });
 
-Route::get('/kirimpesan', function () {
-    return view('kirimpesan');
+
+
+Route::get('kirimpesan','ControllerMemorandum@sent');
+
+Route::get('/suratview', function () {
+    return view('suratview');
 });
 
 Route::get('dashboard/inbox/memorandum','ControllerMemorandum@read');
@@ -51,6 +55,8 @@ Route::get('/memorandumpreview/{id}','ControllerMemorandum@preview');
 Route::get('/memorandumdelete/{id}', 'ControllerMemorandum@hapus');
 Route::post('/simpanmemorandum','ControllerMemorandum@store');
 Route::post('/updatememorandum/{id}','ControllerMemorandum@ubah');
+Route::get('/getPDF','ControllerMemorandum@pdf');
+
 
 Route::get('dashboard/inbox/suratedaran','ControllerSuratEdaran@read');
 Route::get('/suratedaranedit/{id}','ControllerSuratEdaran@show');

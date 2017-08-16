@@ -1,5 +1,3 @@
-@extends('layouts.admin')
-@section('content')
 <style>
 body {
   background: rgb(204,204,204);
@@ -60,8 +58,7 @@ page[size="A5"][layout="portrait"] {
       <div class="box-header with-border">
         <div class="box-body table-responsive">
           <page size="A4">
-            @foreach($memorandum1 as $surat)
-            <p>
+          <p>
               <span style="font-size: 11.0pt; font-family: 'Tahoma',sans-serif;">
                 PERKEBUNAN NUSANTARA III
               </span>
@@ -103,7 +100,7 @@ page[size="A5"][layout="portrait"] {
               </span>
               <span style="font-size: 12.0pt; line-height: 107%; font-family: 'Arial',sans-serif;">
                 Kepada Yth.
-                &nbsp;&nbsp;&nbsp;&nbsp; : {{$surat->kepada}}
+                &nbsp;&nbsp;&nbsp;&nbsp; :
               </span>
             </p>
             <p>
@@ -114,7 +111,7 @@ page[size="A5"][layout="portrait"] {
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 Dari
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                &nbsp;&nbsp; : {{$surat->dari}}
+                &nbsp;&nbsp; :
               </span>
             </p>
             <p>
@@ -124,7 +121,7 @@ page[size="A5"][layout="portrait"] {
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 Nomor &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                :{{$surat->no}}
+                :
               </span>
             </p>
             <p>
@@ -133,7 +130,7 @@ page[size="A5"][layout="portrait"] {
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                Tanggal &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :{{$surat->tanggal}}
+                Tanggal &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :
               </span>
             </p>
             <p>
@@ -146,16 +143,14 @@ page[size="A5"][layout="portrait"] {
             </p>
             <p>
               <span style="font-size: 12.0pt; line-height: 107%; font-family: 'Arial',sans-serif;">
-                Hal : &nbsp;&nbsp; {{$surat->hal}}
+                Hal : &nbsp;&nbsp;
               </span>
             </p>
               <p>
               <span style="font-size: 12.0pt; line-height: 107%; font-family: 'Arial',sans-serif;">
-                : &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;  {!!$surat->isi!!}
+                : &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
               </span>
-            </p>
-         
-            
+            </p>          
             <table>
               <tbody>
                 <tr>
@@ -248,13 +243,5 @@ page[size="A5"][layout="portrait"] {
             </page>
           </div>
         </div>
-        @endforeach
       </div>
-    </div>
-  </div>
-</div>
-
-
-
-
-@stop
+  </section>

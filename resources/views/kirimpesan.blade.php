@@ -16,22 +16,24 @@
   </section>
 
   <!-- Main content -->
-  <section class="content">
+   <section class="content">
     <!-- Default box -->
     <div class="box">
       <div class="box-header with-border">
-        <h3 class="box-title">Sent Mail</h3>
+        <h3 class="box-title">Daftar Surat</h3>
       </div>
       <div class="box-body table-responsive">
         <table class="table table-bordered table-striped" id="dataTable" style="white-space: nowrap;">
           <thead>
             <tr>
+              <th>No</th>
               <th>Kepada</th>
               <th>Dari</th>
               <th>Nomor</th>
               <th>Tanggal</th>
               <th>Hal</th>
-              <th>Aksi</th>
+              <th>Isi</th>
+              <th><div align="center">Aksi</div></th>
             </tr>
           </thead>
           <tfoot>
@@ -46,203 +48,47 @@
             </tr>
           </tfoot>
           <tbody>
+            @foreach ($memorandum as $surat)
             <tr>
-              <td>kepada</td>
-              <td>dari</td>
-              <td>nomor</td>
-              <td>tanggal</td>
-              <td>hal</td>
+            <?php $value = $surat->id ?>
+            @if ( Auth::user()-> name == $surat->dari)
+              
+              <td>{{$loop->iteration}}</td>
+              <td>{{$surat->kepada}}</td>
+              <td>{{$surat->dari}}</td>
+              <td>{{$surat->no}}</td>
+              <td>{{$surat->tanggal}}</td>
+              <td>{{$surat->hal}}</td>
               <td>
-                <button class="btn btn-sm btn-primary edit" >Edit Data</button>
+           
+                <a href="/memorandumedit/{{($value)}}">
+                  <button class="btn btn-sm btn-primary edit" >
+                    Edit
+                  </button>
+                </a>
+                <!--button class="btn btn-sm btn-danger hapus" onclick="hapus(this)">Hapus</button-->
+              </td>
+              <td>
+                <a href="/memorandumpreview/{{($value)}}">
+                  <button class="btn btn-sm btn-primary edit" onclick="">
+                    Preview
+                  </button>
+                </a>
+                <!--button class="btn btn-sm btn-danger hapus" onclick="hapus(this)">Hapus</button-->
+                <a href="/memorandumdelete/{{($value)}}">
+                  <button class="btn btn-sm btn-primary edit" onclick="">
+                    Delete
+                  </button>
+                </a>
+                <!--button class="btn btn-sm btn-danger hapus" onclick="hapus(this)">Hapus</button-->
               </td>
             </tr>
-            <tr>
-              <td>kepada</td>
-              <td>dari</td>
-              <td>nomor</td>
-              <td>tanggal</td>
-              <td>hal</td>
-              <td>
-                <button class="btn btn-sm btn-primary edit" >Edit Data</button>
-              </td>
-            </tr>
-            <tr>
-              <td>kepada</td>
-              <td>dari</td>
-              <td>nomor</td>
-              <td>tanggal</td>
-              <td>hal</td>
-              <td>
-                <button class="btn btn-sm btn-primary edit" >Edit Data</button>
-              </td>
-            </tr>
-            <tr>
-              <td>kepada</td>
-              <td>dari</td>
-              <td>nomor</td>
-              <td>tanggal</td>
-              <td>hal</td>
-              <td>
-                <button class="btn btn-sm btn-primary edit" >Edit Data</button>
-              </td>
-            </tr>
-            <tr>
-              <td>kepada</td>
-              <td>dari</td>
-              <td>nomor</td>
-              <td>tanggal</td>
-              <td>hal</td>
-              <td>
-                <button class="btn btn-sm btn-primary edit" >Edit Data</button>
-              </td>
-            </tr>
-            <tr>
-              <td>kepada</td>
-              <td>dari</td>
-              <td>nomor</td>
-              <td>tanggal</td>
-              <td>hal</td>
-              <td>
-                <button class="btn btn-sm btn-primary edit" >Edit Data</button>
-              </td>
-            </tr>
-            <tr>
-              <td>kepada</td>
-              <td>dari</td>
-              <td>nomor</td>
-              <td>tanggal</td>
-              <td>hal</td>
-              <td>
-                <button class="btn btn-sm btn-primary edit" >Edit Data</button>
-              </td>
-            </tr>
-            <tr>
-              <td>kepada</td>
-              <td>dari</td>
-              <td>nomor</td>
-              <td>tanggal</td>
-              <td>hal</td>
-              <td>
-                <button class="btn btn-sm btn-primary edit" >Edit Data</button>
-              </td>
-            </tr>
-            <tr>
-              <td>kepada</td>
-              <td>dari</td>
-              <td>nomor</td>
-              <td>tanggal</td>
-              <td>hal</td>
-              <td>
-                <button class="btn btn-sm btn-primary edit" >Edit Data</button>
-              </td>
-            </tr>
-            <tr>
-              <td>kepada</td>
-              <td>dari</td>
-              <td>nomor</td>
-              <td>tanggal</td>
-              <td>hal</td>
-              <td>
-                <button class="btn btn-sm btn-primary edit" >Edit Data</button>
-              </td>
-            </tr>
-            <tr>
-              <td>kepada</td>
-              <td>dari</td>
-              <td>nomor</td>
-              <td>tanggal</td>
-              <td>hal</td>
-              <td>
-                <button class="btn btn-sm btn-primary edit" >Edit Data</button>
-              </td>
-            </tr>
-            <tr>
-              <td>kepada</td>
-              <td>dari</td>
-              <td>nomor</td>
-              <td>tanggal</td>
-              <td>hal</td>
-              <td>
-                <button class="btn btn-sm btn-primary edit" >Edit Data</button>
-              </td>
-            </tr>
-            <tr>
-              <td>kepada</td>
-              <td>dari</td>
-              <td>nomor</td>
-              <td>tanggal</td>
-              <td>hal</td>
-              <td>
-                <button class="btn btn-sm btn-primary edit" >Edit Data</button>
-              </td>
-            </tr>
-            <tr>
-              <td>kepada</td>
-              <td>dari</td>
-              <td>nomor</td>
-              <td>tanggal</td>
-              <td>hal</td>
-              <td>
-                <button class="btn btn-sm btn-primary edit" >Edit Data</button>
-              </td>
-            </tr>
-            <tr>
-              <td>kepada</td>
-              <td>dari</td>
-              <td>nomor</td>
-              <td>tanggal</td>
-              <td>hal</td>
-              <td>
-                <button class="btn btn-sm btn-primary edit" >Edit Data</button>
-              </td>
-            </tr>
-            <tr>
-              <td>kepada</td>
-              <td>dari</td>
-              <td>nomor</td>
-              <td>tanggal</td>
-              <td>hal</td>
-              <td>
-                <button class="btn btn-sm btn-primary edit" >Edit Data</button>
-              </td>
-            </tr>
-            <tr>
-              <td>kepada</td>
-              <td>dari</td>
-              <td>nomor</td>
-              <td>tanggal</td>
-              <td>hal</td>
-              <td>
-                <button class="btn btn-sm btn-primary edit" >Edit Data</button>
-              </td>
-            </tr>
-            <tr>
-              <td>kepada</td>
-              <td>dari</td>
-              <td>nomor</td>
-              <td>tanggal</td>
-              <td>hal</td>
-              <td>
-                <button class="btn btn-sm btn-primary edit" >Edit Data</button>
-              </td>
-            </tr>
-            <tr>
-              <td>kepada</td>
-              <td>dari</td>
-              <td>nomor</td>
-              <td>tanggal</td>
-              <td>hal</td>
-              <td>
-                <button class="btn btn-sm btn-primary edit" >Edit Data</button>
-              </td>
-            </tr>
+              @endif
+            @endforeach
           </tbody>
         </table>
       </div>
-      <!-- /.box-body -->
     </div>
-    <!-- /.box -->
-
   </section>
 
 @stop
