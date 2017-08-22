@@ -53,7 +53,7 @@
             </li>
         </ul>
       </div>
-      @endif
+     
     </nav>
 </header>
 
@@ -68,13 +68,18 @@
         <img src="{{ asset('img/default.png') }}" class="img-circle" alt="User Image">
       </div>
       <div class="pull-left info">
-        <p>Administrator</p>
-        Ilmu Komputer IPB
+        <p>{{ Auth::user()-> name }}</p>
+        {{Auth::user()-> bagian}}
       </div>
     </div>
     <!-- Sidebar Menu -->
+
+ @endif
+
+    @if(Auth::user()-> status == 1)
     <ul class="sidebar-menu">
-      <li><a href="{{ url('/dashboard/pilihsurat') }}"><b>Create Mail</b></a></li>
+      <br>
+
       <ul id="tree1">
         <li><a href="{{ url('/inbox') }}">Inbox</a>
           <ul>
@@ -96,14 +101,42 @@
           </ul>
         </li>
       </ul>
+    
+    </ul>
+    @else
+      <ul class="sidebar-menu">
+      <li><a href="{{ url('/dashboard/pilihsurat') }}">Create Mail </a></li>
+      <ul id="tree1">
+        <li><a href="{{ url('/inbox') }}">Inbox </a>
+          <ul>
+            <li>
+              <a href="{{ url('dashboard/inbox/memorandum') }}">
+                <span>Memorandum</span>
+              </a>
+            </li>
+            <li>
+              <a href="{{ url('dashboard/inbox/suratedaran') }}">
+                <span>Surat Edaran</span>
+              </a>
+            </li>
+            <li>
+              <a href="{{ url('dashboard/inbox/intern') }}">
+                <span>Intern</span>
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
       <li>
         <a href="{{ url('/kirimpesan') }}">
-          <b>Sent Mail</b>
+          <b>Sent Mail </b>
         </a>
       </li>
     </ul>
   </section>
 </aside>
+
+@endif
 <style>
 .tree, .tree ul {
   margin:0;

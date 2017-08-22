@@ -27,7 +27,7 @@
         <table class="table table-bordered table-striped" id="dataTable" style="white-space: nowrap;">
           <thead>
             <tr>
-              <th>No</th>
+          
               <th>Kepada</th>
               <th>Dari</th>
               <th>Nomor</th>
@@ -37,24 +37,59 @@
               <th><div align="center">Aksi</div></th>
             </tr>
           </thead>
-          <tfoot>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>Kepada</td>
-              <td>Dari</td>
-              <td>Tanggal</td>
-              <td>Hal</td>
-              <td></td>
-            </tr>
-          </tfoot>
+       
           <tbody>
             @foreach ($memorandum as $surat)
             <tr>
             <?php $value = $surat->id ?>
-            @if ( Auth::user()-> name == $surat->kepada)
+           
+            @if((Auth::user()-> status == 1) &&  (Auth::user()-> bagian == $surat->dari) )
               
-              <td>{{$loop->iteration}}</td>
+              <td>{{$surat->kepada}}</td>
+              <td>{{$surat->dari}}</td>
+              <td>{{$surat->no}}</td>
+              <td>{{$surat->tanggal}}</td>
+              <td>{{$surat->hal}}</td>
+              <td>
+           
+                <a href="/memorandumedit/{{($value)}}">
+                  <button class="btn btn-sm btn-info edit" >
+                    Edit
+                  </button>
+                </a>
+                <!--button class="btn btn-sm btn-danger hapus" onclick="hapus(this)">Hapus</button-->
+              </td>
+              <td>
+                <a href="/memorandumpreview/{{($value)}}">
+                  <button class="btn btn-sm btn-primary edit" onclick="">
+                    Preview
+                  </button>
+                </a>
+                <!--button class="btn btn-sm btn-danger hapus" onclick="hapus(this)">Hapus</button-->
+             
+                @if($surat->status == 1)
+                 <a href="/memorandumapp/{{($value)}}">
+                  <button class="btn btn-sm btn-success edit" onclick="">
+                    Approve
+                  </button>
+                </a>
+                @else
+                  <a href="/memorandumapp/{{($value)}}">
+                  <button class="btn btn-sm btn-warning edit" onclick="">
+                    Approve
+                  </button>
+                </a>
+                @endif
+                   <a href="/memorandumdelete/{{($value)}}">
+                  <button class="btn btn-sm btn-danger edit" onclick="">
+                    Delete
+                  </button>
+                </a>
+              </td>
+            </tr>
+             @elseif ( (Auth::user()-> bagian == $surat->kepada) && $surat->status == 1 && (Auth::user()-> name == $surat->kepada))
+              
+             
               <td>{{$surat->kepada}}</td>
               <td>{{$surat->dari}}</td>
               <td>{{$surat->no}}</td>
@@ -77,14 +112,14 @@
                 </a>
                 <!--button class="btn btn-sm btn-danger hapus" onclick="hapus(this)">Hapus</button-->
                 <a href="/memorandumdelete/{{($value)}}">
-                  <button class="btn btn-sm btn-primary edit" onclick="">
+                  <button class="btn btn-sm btn-danger edit" onclick="">
                     Delete
                   </button>
                 </a>
                 <!--button class="btn btn-sm btn-danger hapus" onclick="hapus(this)">Hapus</button-->
               </td>
             </tr>
-              @endif
+            @endif
             @endforeach
           </tbody>
         </table>

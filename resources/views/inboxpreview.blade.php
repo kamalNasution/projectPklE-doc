@@ -146,108 +146,17 @@ page[size="A5"][layout="portrait"] {
             </p>
             <p>
               <span style="font-size: 12.0pt; line-height: 107%; font-family: 'Arial',sans-serif;">
-                Hal : &nbsp;&nbsp; {{$surat->hal}}
+                <b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;Hal : &nbsp;&nbsp; {{$surat->hal}} <b/>
               </span>
             </p>
               <p>
               <span style="font-size: 12.0pt; line-height: 107%; font-family: 'Arial',sans-serif;">
-                : &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;  {!!$surat->isi!!}
+                &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;  {!!$surat->isi!!}
               </span>
             </p>
          
             
-            <table>
-              <tbody>
-                <tr>
-                  <td width="397">&nbsp;</td>
-                </tr>
-                <tr>
-                  <td>&nbsp;</td>
-                  <td style="vertical-align: top; background: white;" width="290">
-                    <table width="100%">
-                      <tbody>
-                        <tr>
-                          <td>
-                            <h2 style="text-align: center;">
-                              <span style="font-size: 12pt;">
-                                <strong>
-                                  <span style="font-family: 'Arial',sans-serif;">
-                                    Bagian Sumber Daya Manusia
-                                  </span>
-                                </strong>
-                              </span>
-                            </h2>
-                            <p style="text-align: center;">
-                              <span style="font-size: 12.0pt; line-height: 107%; font-family: 'Tahoma',sans-serif;">
-                                &nbsp;
-                              </span>
-                            </p>
-                            <p style="text-align: center;">
-                              <span style="font-size: 12.0pt; line-height: 107%; font-family: 'Tahoma',sans-serif;">
-                                &nbsp;
-                              </span>
-                            </p>
-                            <p style="text-align: center;">
-                              &nbsp;
-                            </p>
-                            <p style="text-align: center;">
-                              <strong>
-                                <u>
-                                  <span style="font-size: 12.0pt; line-height: 107%; font-family: 'Arial',sans-serif;">
-                                    H
-                                  </span>
-                                </u>
-                              </strong>
-                              <strong>
-                                <u>
-                                  <span style="font-size: 12.0pt; line-height: 107%; font-family: 'Arial',sans-serif;">
-                                    j
-                                  </span>
-                                </u>
-                              </strong>
-                              <strong>
-                                <u>
-                                  <span style="font-size: 12.0pt; line-height: 107%; font-family: 'Arial',sans-serif;">
-                                     Ama
-                                   </span>
-                                 </u>
-                               </strong>
-                               <strong>
-                                 <u>
-                                   <span style="font-size: 12.0pt; line-height: 107%; font-family: 'Arial',sans-serif;">
-                                     lia Nasution
-                                   </span>
-                                 </u>
-                               </strong>
-                             </p>
-                            <p style="text-align: center;">
-                              <span style="font-family: 'Arial',sans-serif;">
-                                Kepala Bagian
-                              </span>
-                            </p>
-                            <p style="text-align: center;">
-                              <strong>
-                                &nbsp;
-                              </strong>
-                            </p>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                    &nbsp;</td>
-                  </tr>
-                </tbody>
-              </table>
-              <p><span style="font-size: 12.0pt; line-height: 107%; font-family: 'Arial',sans-serif;">&nbsp;</span></p>
-              <p><span style="font-size: 12.0pt; line-height: 107%; font-family: 'Arial',sans-serif;">&nbsp;</span></p>
-              <p><span style="font-size: 12.0pt; line-height: 107%; font-family: 'Arial',sans-serif;">&nbsp;</span></p>
-              <p>&nbsp;</p>
-              <p>&nbsp;</p>
-              <p style="margin-left: 21.3pt;"><u><span style="font-size: 10.0pt; line-height: 107%; font-family: 'Tahoma',sans-serif;">T</span></u><u><span style="font-size: 10.0pt; line-height: 107%; font-family: 'Tahoma',sans-serif;">embusan</span></u> <u><span style="font-size: 10.0pt; line-height: 107%; font-family: 'Tahoma',sans-serif;">:</span></u></p>
-              <p style="margin-bottom: .0001pt; line-height: normal; tab-stops: 21.3pt;">&nbsp;</p>
-            </page>
-          </div>
-        </div>
+           
         @endforeach
       </div>
     </div>

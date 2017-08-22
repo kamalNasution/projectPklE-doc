@@ -25,7 +25,7 @@
         <table class="table table-bordered table-striped" id="dataTable" style="white-space: nowrap;">
           <thead>
             <tr>
-              <th>No</th>
+            
               <th>Kepada</th>
               <th>Dari</th>
               <th>Nomor</th>
@@ -35,24 +35,14 @@
               <th><div align="center">Aksi</div></th>
             </tr>
           </thead>
-          <tfoot>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>Kepada</td>
-              <td>Dari</td>
-              <td>Tanggal</td>
-              <td>Hal</td>
-              <td></td>
-            </tr>
-          </tfoot>
+    
           <tbody>
             @foreach ($memorandum as $surat)
             <tr>
             <?php $value = $surat->id ?>
             @if ( Auth::user()-> name == $surat->dari)
               
-              <td>{{$loop->iteration}}</td>
+          
               <td>{{$surat->kepada}}</td>
               <td>{{$surat->dari}}</td>
               <td>{{$surat->no}}</td>

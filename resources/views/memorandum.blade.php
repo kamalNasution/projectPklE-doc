@@ -23,7 +23,7 @@
                 <label for="kepada" class="col-md-4 control-label">Kepada</label>
                 <div class="col-md-6">
                   <select id="kepada" class="form-control" name="kepada">
-                    <option value="0">--Pilih Asal--</option>
+                    <option value="0">--Pilih Tujuan--</option>
                     <option value=" Bagian Sekretariat">Bagian Sekretariat</option>
                     <option value=" Bagian Tanaman"> Bagian Tanaman</option>
                     <option value=" Bagian Teknik">Bagian Teknik</option>

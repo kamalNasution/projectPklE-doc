@@ -53,8 +53,10 @@ Route::get('dashboard/inbox/memorandum','ControllerMemorandum@read');
 Route::get('/memorandumedit/{id}','ControllerMemorandum@show');
 Route::get('/memorandumpreview/{id}','ControllerMemorandum@preview');
 Route::get('/memorandumdelete/{id}', 'ControllerMemorandum@hapus');
+Route::get('/memorandumapp/{id}','ControllerMemorandum@app');
 Route::post('/simpanmemorandum','ControllerMemorandum@store');
 Route::post('/updatememorandum/{id}','ControllerMemorandum@ubah');
+Route::get('/suratpdf/{id}','ControllerMemorandum@tampil');
 Route::get('/getPDF','ControllerMemorandum@pdf');
 
 

@@ -42,6 +42,13 @@ class ControllerMemorandum extends Controller
       return view('inboxpreview', $data);
     }
 
+       public function tampil($id){
+      $data['memorandum1'] = Surat::where('id',[$id])->get();
+      return view('suratPDF', $data);
+    }
+
+
+
     public function hapus($id){
       Surat::where('id',[$id])->delete();
       $data['memorandum'] = Surat::all();
@@ -62,6 +69,7 @@ class ControllerMemorandum extends Controller
     }
 
      public function pdf(){
+      
          $pdf=PDF::loadview('suratPDF');
          return $pdf->download('suratview.pdf');
 
@@ -70,5 +78,12 @@ class ControllerMemorandum extends Controller
     public function sent(){
         $data['memorandum'] = Surat::all();
         return view('kirimpesan',$data);
+    }
+
+    public function app($id){
+         $data = Surat::find($id);
+         $data->status = Input::get('status',1);
+         $data->save();
+         return redirect('dashboard/inbox/memorandum');
     }
 }
